@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Agents Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<main class="flex-1">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-8">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_535">
+<rect fill="white" height="48" width="48"></rect>
+</clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI Agents GTCloud</h2>
+</div>
+<nav class="hidden items-center gap-6 lg:flex">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="/marketing.html" target="_blank">Agente Marketing</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="/finanzas.html" target="_blank">Agente Finanzas</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="/recursos_humanos.html" target="_blank">Agente RH</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="/comercial.html" target="_blank">Agente Comercial</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="/produccion.html" target="_blank">Agente Producción</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="/logistica.html" target="_blank">Agente Logística</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary/90 text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<a href="https://www.gtcloud.co/contacto" target="_blank"><span class="truncate">Contáctanos</span></a>
+</button>
+<button class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- HeroSection -->
+<section class="relative py-20 sm:py-24 lg:py-32">
+<div class="absolute inset-0 z-0">
+<img alt="Abstract blue and purple lines on a dark background, conveying a sense of technology and data flow." class="h-full w-full object-cover opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwngOFpw7ohbBwEf7S7t59NAy443SixtRo_6z6txRGapCCRtvI5FLnsgUosRX6HLJn-53HWWOwyl9Y_sTsVeF-Qs6Gr4Lx2uyKI4aSNJzj7ZI6Q-vSGVgl54ezkrExuqnd_6_N3FY7xi7BaT3ElhiVSPf65di_fOmxipz2SYhsfdepu9FCqSa_3sIjojuUycWX8INgye4Yeg3pD1-sflxVipyjBdYVlNPbKXHKadqR5im6rbmKeL4O1BqZlksSsvMMUpuAos4Y5Flf"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
+</div>
+<div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
+<div class="flex flex-col items-center gap-6">
+<h1 class="text-white text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                                Potencia tu negocio con agentes de IA especializados.
+                            </h1>
+<h2 class="max-w-2xl text-base font-normal leading-normal text-white/80 sm:text-lg">
+                                Automatice procesos y obtenga información basada en datos en todos los departamentos, desde marketing hasta logística, con nuestra potente plataforma de IA.
+                            </h2>
+<div class="flex flex-wrap justify-center gap-4 pt-4">
+
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-white/10 hover:bg-white/20 text-white text-base font-bold leading-normal tracking-[0.015em]">
+<a href="https://www.gtcloud.co/copia-de-implementaci%C3%B3n-de-erp" target="_blank"><span class="truncate">Más Información</span></a>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+
+<!-- FeatureSection -->
+<section class="py-16 sm:py-20 lg:py-24">
+<div class="mx-auto max-w-5xl px-4">
+<div class="flex flex-col gap-12 @container">
+<div class="flex flex-col gap-6 items-start">
+<div class="flex flex-col gap-4">
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-3xl">
+                                        Desbloquea la máxima eficiencia con la automatización inteligente
+                                    </h1>
+<p class="text-white/80 text-base font-normal leading-normal max-w-3xl">
+                                        Nuestra plataforma proporciona agentes de IA especializados diseñados para abordar los desafíos únicos de sus funciones empresariales principales.
+                                    </p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-[0.015em] w-fit">
+<span class="truncate">Explorar</span>
+</button>
+</div>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+<div class="flex flex-col flex-1 gap-4 rounded-xl border border-white/10 bg-white/5 p-6">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">rocket_launch</span>
+<div class="flex flex-col gap-2">
+<h2 class="text-white text-lg font-bold leading-tight">Mayor productividad</h2>
+<p class="text-[#9da6b9] text-sm font-normal leading-normal">
+                                            Automatice las tareas repetitivas y libere a su equipo para que se centre en iniciativas estratégicas y trabajos de alto valor.
+                                        </p>
+</div>
+</div>
+<div class="flex flex-col flex-1 gap-4 rounded-xl border border-white/10 bg-white/5 p-6">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">monitoring</span>
+<div class="flex flex-col gap-2">
+<h2 class="text-white text-lg font-bold leading-tight">Perspectivas basadas en datos</h2>
+<p class="text-[#9da6b9] text-sm font-normal leading-normal">
+                                            Aproveche la analítica avanzada para tomar decisiones más inteligentes y rápidas basadas en datos en tiempo real de sus operaciones.
+                                        </p>
+</div>
+</div>
+<div class="flex flex-col flex-1 gap-4 rounded-xl border border-white/10 bg-white/5 p-6">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">settings_suggest</span>
+<div class="flex flex-col gap-2">
+<h2 class="text-white text-lg font-bold leading-tight">Seamless Process Automation</h2>
+<p class="text-[#9da6b9] text-sm font-normal leading-normal">
+                                            Conecte sistemas y optimice los flujos de trabajo entre departamentos para lograr un negocio más eficiente y ágil.
+                                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="border-t border-white/10 py-12">
+<div class="mx-auto max-w-5xl px-4">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535_footer)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_535_footer"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight">AI Agents GTCloud</h2>
+</div>
+<p class="text-[#9da6b9] text-sm">Potenciando los negocios con automatización inteligente.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-white font-bold">Agentes</h3>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="/marketing.html" target="_blank">Marketing</a>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="/finanzas.html" target="_blank">Finanzas</a>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="/recursos_humanos.html" target="_blank">Recursos Humanos</a>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="/comercial.html" target="_blank">Comercial</a>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="/produccion.html" target="_blank">Producción</a>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="/logistica.html" target="_blank">Logística</a>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-white font-bold">Compañia</h3>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="https://www.gtcloud.co/quienes-somos" target="_blank">Sobre Nosotros</a>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="https://www.gtcloud.co/contacto" target="_blank">Contacto</a>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="https://www.gtcloud.co/blog" target="_blank">Blog</a>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-white font-bold">Legal</h3>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="#">Políticas de Privacidad</a>
+<a class="text-[#9da6b9] hover:text-white text-sm" href="#">Términos de servicio</a>
+</div>
+</div>
+<div class="mt-8 border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-[#9da6b9] text-sm">© 2025 AI Agents Platform. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-[#9da6b9] hover:text-white" href="#"><svg class="feather feather-twitter" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+<a class="text-[#9da6b9] hover:text-white" href="#"><svg class="feather feather-linkedin" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+<a class="text-[#9da6b9] hover:text-white" href="#"><svg class="feather feather-github" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+</div>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+</body></html>

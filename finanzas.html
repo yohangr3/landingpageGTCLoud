@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Agente Finanzas - AI Finance Tools</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              display: ["Space Grotesk"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex min-h-screen w-full flex-col">
+      <div class="flex-grow">
+        <header
+          class="sticky top-0 z-50 border-b border-white/10 bg-background-dark/80 backdrop-blur-sm"
+        >
+          <nav
+            class="container mx-auto flex items-center justify-between px-6 py-4"
+          >
+            <div class="flex items-center gap-4 text-white">
+              <svg
+                class="h-6 w-6 text-primary"
+                fill="none"
+                viewbox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <h2 class="text-white text-xl font-bold leading-tight">
+                Agente Finanzas
+              </h2>
+            </div>
+            <div class="hidden items-center gap-8 md:flex">
+              <a
+                class="text-gray-300 hover:text-white text-sm font-medium leading-normal"
+                href="/index.html"
+                >Inicio</a
+              >
+              <a
+                class="text-gray-300 hover:text-white text-sm font-medium leading-normal"
+                href="#"
+                >Características</a
+              >
+
+              <a
+                class="text-gray-300 hover:text-white text-sm font-medium leading-normal"
+                href="#"
+                >Integraciones</a
+              >
+              <a
+                class="text-gray-300 hover:text-white text-sm font-medium leading-normal"
+                href="https://www.gtcloud.co/quienes-somos" target="_blank"
+                >Compañia</a
+              >
+            </div>
+            <div class="flex gap-3">
+              <button
+                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/90"
+              >
+                <span class="truncate">Get Started</span>
+              </button>
+            </div>
+          </nav>
+        </header>
+        <main class="container mx-auto px-6 py-16 sm:py-24">
+          <div class="mx-auto max-w-3xl text-center">
+            <h1
+              class="text-4xl font-black leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl"
+            >
+              Agente Finanzas
+            </h1>
+            <p class="mt-4 text-lg text-gray-400 sm:text-xl">
+              Aproveche la IA para optimizar sus operaciones financieras, desde
+              la previsión hasta la detección de fraudes.
+            </p>
+          </div>
+          <div
+            class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+          >
+            <!-- Card 1 -->
+            <div
+              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >trending_up</span
+                  >
+                </div>
+                <h3 class="text-lg font-bold text-white">
+                  Agente Financiero - Plaid
+                </h3>
+              </div>
+              <p class="mt-4 flex-grow text-gray-400">
+                Gestión inteligente de finanzas con conexión segura y análisis
+                en tiempo real.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Conexión a cuentas bancarias y datos de cuenta</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Transacciones y categorización de gastos</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span
+                    >Inicio de pagos / transferencias desde la cuenta
+                    bancaria</span
+                  >
+                </div>
+              </div>
+              <button
+                class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
+              >
+                <a href="https://plaid.com/" target="_blank"
+                  ><span class="truncate">Descubre más</span></a
+                >
+              </button>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary"
+                >
+                  <span class="material-symbols-outlined text-3xl">policy</span>
+                </div>
+                <h3 class="text-lg font-bold text-white">
+                  Agente Financiero - MiniMax
+                </h3>
+              </div>
+              <p class="mt-4 flex-grow text-gray-400">
+                Herramienta de análisis financiero inteligente.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Análisis de Márgenes y Costos</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Automatización de Reportes KPI</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Pronósticos de Flujo de Caja</span>
+                </div>
+              </div>
+              <button
+                class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
+              >
+                <a href="https://www.minimax.io/" target="_blank"
+                  ><span class="truncate">Descrubre más</span></a
+                >
+              </button>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >insights</span
+                  >
+                </div>
+                <h3 class="text-lg font-bold text-white">
+                  Agentes Financiero - Genspark
+                </h3>
+              </div>
+              <p class="mt-4 flex-grow text-gray-400">
+                IA financiera que transforma datos en insights accionables
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Dashboards de Márgenes Interactivos</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Detección de Riesgos en Reportes</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Optimización de Presupuestos Multimedia</span>
+                </div>
+              </div>
+              <button
+                class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
+              >
+                <a href="https://www.genspark.ai/" target="_blank"
+                  ><span class="truncate">Descrubre más</span></a
+                >
+              </button>
+            </div>
+            <!-- Card 4 -->
+            <div
+              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >document_scanner</span
+                  >
+                </div>
+                <h3 class="text-lg font-bold text-white">
+                  Agente Financiero - Zeni
+                </h3>
+              </div>
+              <p class="mt-4 flex-grow text-gray-400">
+                Automatiza contabilidad, pronostica cash flow y optimiza
+                finanzas
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Automatización de Contabilidad</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Análisis y Predicción de Flujo de Caja</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-300">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Optimización de Costos y Alertas</span>
+                </div>
+              </div>
+              <button
+                class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
+              >
+                <a
+                  href="https://www.zeni.ai/ai-agents/ai-cfo-agent"
+                  target="_blank"
+                  ><span class="truncate">Descubre más</span></a
+                >
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="border-t border-white/10">
+        <div
+          class="container mx-auto flex flex-col items-center justify-between gap-6 px-6 py-8 text-center sm:flex-row"
+        >
+          <div class="flex items-center gap-4">
+            <svg
+              class="h-5 w-5 text-gray-400"
+              fill="none"
+              viewbox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <p class="text-gray-400 text-sm">
+              © 2025 Agente Finanzas. All rights reserved.
+            </p>
+          </div>
+          <div
+            class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"
+          >
+            <a class="text-gray-400 hover:text-white text-sm" href="#"
+              >Términos</a
+            >
+            <a class="text-gray-400 hover:text-white text-sm" href="#"
+              >Política de Privacidad</a
+            >
+            <a class="text-gray-400 hover:text-white text-sm" href="#"
+              >Contactanos</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
