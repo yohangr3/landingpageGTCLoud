@@ -43,9 +43,65 @@
       .material-symbols-outlined {
         font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
       }
+
+      /* Background Animation Styles */
+      .background-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .background-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .background-slide.active {
+        opacity: 1;
+      }
+
+      .slide1 {
+        background-image: url('/img/comercialUno.png');
+      }
+
+      .slide2 {
+        background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      }
+
+      .slide3 {
+        background-image: url('/img/comercialDos.png');
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(16, 22, 34, 0.85);
+      }
     </style>
   </head>
   <body class="bg-background-light dark:bg-background-dark font-display">
+    <!-- Animated Background -->
+    <div class="background-container">
+      <div class="background-slide slide1 active"></div>
+      <div class="background-slide slide2"></div>
+      <div class="background-slide slide3"></div>
+      <div class="overlay"></div>
+    </div>
+
     <div class="relative flex min-h-screen w-full flex-col">
       <div class="flex-grow">
         <header
@@ -67,7 +123,7 @@
                 ></path>
               </svg>
               <h2 class="text-white text-xl font-bold leading-tight">
-                Agentes Comerciales
+                AI´s Comerciales
               </h2>
             </div>
             <div class="hidden items-center gap-8 md:flex">
@@ -107,7 +163,7 @@
             <h1
               class="text-4xl font-black leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl"
             >
-              Agentes Comerciales
+              AI's Comerciales
             </h1>
             <p class="mt-4 text-lg text-gray-400 sm:text-xl">
               Aumente las ventas, automatice la captación de clientes y mejore
@@ -120,7 +176,7 @@
           >
             <!-- Card 1 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -134,24 +190,24 @@
                   Clari
                 </h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Agente de revenue operations con IA que optimiza pronósticos,
                 pipeline y coaching para maximizar ventas.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Pronósticos de Ventas Automatizados</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Insights Impulsados por IA</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -170,7 +226,7 @@
             </div>
             <!-- Card 2 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -184,24 +240,24 @@
                   MiniMax
                 </h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Automatiza marketing, analiza clientes y genera videos para
                 ventas escalables.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Personalización de Campañas</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Análisis de Comportamiento del Cliente</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -218,7 +274,7 @@
             </div>
             <!-- Card 3 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -232,24 +288,24 @@
                  Genspark
                 </h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 IA agentica para leads, pronósticos y optimización de ventas con
                 insights instantáneos.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Generación de Leads Automatizada</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Análisis Predictivo de Ventas</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -266,7 +322,7 @@
             </div>
             <!-- Card 4 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -280,19 +336,19 @@
                   Lavender AI
                 </h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Agente para emails de ventas que genera mensajes, optimiza en
                 tiempo real, personaliza por prospecto y analiza equipos con
                 integraciones fluidas.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Generación de correos de ventas con IA</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -301,7 +357,7 @@
                     optimización</span
                   >
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -318,7 +374,7 @@
             </div>
             <!-- Card 5 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -330,27 +386,27 @@
                   Hume.io
                 </h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Agente de nudges personalizados para análisis de datos, desarrollo
                 conductual y engagement en equipos comerciales.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span
-                    >Motor de “nudges” o recordatorios breves
+                    >Motor de "nudges" o recordatorios breves
                     personalizados</span
                   >
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Optimización de engagement en campañas</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -404,5 +460,19 @@
         </div>
       </footer>
     </div>
+
+    <!-- Script para la animación del fondo -->
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.background-slide');
+      
+      function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }
+      
+      setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+    </script>
   </body>
 </html>

@@ -43,9 +43,65 @@
       .material-symbols-outlined {
         font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
       }
+
+      /* Background Animation Styles */
+      .background-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .background-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .background-slide.active {
+        opacity: 1;
+      }
+
+      .slide1 {
+        background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+      }
+
+      .slide2 {
+        background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+      }
+
+      .slide3 {
+        background-image: url("https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(16, 22, 34, 0.85);
+      }
     </style>
   </head>
   <body class="bg-background-light dark:bg-background-dark font-display">
+    <!-- Animated Background -->
+    <div class="background-container">
+      <div class="background-slide slide1 active"></div>
+      <div class="background-slide slide2"></div>
+      <div class="background-slide slide3"></div>
+      <div class="overlay"></div>
+    </div>
+
     <div class="relative flex min-h-screen w-full flex-col">
       <div class="flex-grow">
         <header
@@ -67,7 +123,7 @@
                 ></path>
               </svg>
               <h2 class="text-white text-xl font-bold leading-tight">
-                Agente Marketing
+                AI's Marketing
               </h2>
             </div>
             <div class="hidden items-center gap-8 md:flex">
@@ -89,7 +145,8 @@
               >
               <a
                 class="text-gray-300 hover:text-white text-sm font-medium leading-normal"
-                href="https://www.gtcloud.co/quienes-somos" target="_blank"
+                href="https://www.gtcloud.co/quienes-somos"
+                target="_blank"
                 >Compañia</a
               >
             </div>
@@ -107,11 +164,11 @@
             <h1
               class="text-4xl font-black leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl"
             >
-              Agentes de Marketing
+              AI's de Marketing
             </h1>
             <p class="mt-4 text-lg text-gray-400 sm:text-xl">
-              Agentes y herramientas impulsadas por IA para potenciar tus esfuerzos de
-              marketing
+              Agentes y herramientas impulsadas por IA para potenciar tus
+              esfuerzos de marketing
             </p>
           </div>
           <div
@@ -119,7 +176,7 @@
           >
             <!-- Card 1 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -129,29 +186,27 @@
                     brand_awareness
                   </span>
                 </div>
-                <h3 class="text-lg font-bold text-white">
-                  Jasper
-                </h3>
+                <h3 class="text-lg font-bold text-white">Jasper</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Genera contenido multimodal con plantillas, tono de marca,
                 automatización de flujos y colaboraciones integradas para
                 equipos.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Creación de contenido variado</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Integraciones y colaboraciones</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -168,7 +223,7 @@
             </div>
             <!-- Card 2 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -176,29 +231,27 @@
                 >
                   <span class="material-symbols-outlined"> add_ad </span>
                 </div>
-                <h3 class="text-lg font-bold text-white">
-                  MiniMax
-                </h3>
+                <h3 class="text-lg font-bold text-white">MiniMax</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Emails, posts y microsites multilingües; análisis de ads,
                 prototipos rápidos y generación de imágenes, audio/video
                 impactantes.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Generación de Contenido Marketing</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Integración SEO y Analytics</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -215,7 +268,7 @@
             </div>
             <!-- Card 3 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -223,27 +276,26 @@
                 >
                   <span class="material-symbols-outlined"> ads_click </span>
                 </div>
-                <h3 class="text-lg font-bold text-white">
-                  Genspark
-                </h3>
+                <h3 class="text-lg font-bold text-white">Genspark</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
-                análisis ads, prototipos rápidos, generador de imágenes/audio/video.
+              <p class="mt-4 flex-grow text-gray-300">
+                análisis ads, prototipos rápidos, generador de
+                imágenes/audio/video.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Investigación de Mercado</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Análisis de Competidores</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -254,13 +306,13 @@
                 class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
               >
                 <a href="https://www.genspark.ai/" target="_blank"
-                  ><span class="truncate">Descrubre más</span></a
+                  ><span class="truncate">Descubre más</span></a
                 >
               </button>
             </div>
             <!-- Card 4 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -270,29 +322,27 @@
                     grouped_bar_chart
                   </span>
                 </div>
-                <h3 class="text-lg font-bold text-white">
-                  Synthesia
-                </h3>
+                <h3 class="text-lg font-bold text-white">Synthesia</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Crea videos AI personalizados con avatares para campañas de
                 marketing, explicaciones de productos y contenido multilingüe
                 engaging.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Clonación de voz personalizada</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Análisis de rendimiento integrado</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -309,7 +359,7 @@
             </div>
             <!-- Card 5 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -319,29 +369,27 @@
                     grouped_bar_chart
                   </span>
                 </div>
-                <h3 class="text-lg font-bold text-white">
-                  Delve AI
-                </h3>
+                <h3 class="text-lg font-bold text-white">Delve AI</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Genera personas de clientes/competidores con IA para
                 segmentación, investigación sintética y recomendaciones de
                 marketing accionables.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Investigación sintética</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Webhooks</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -352,6 +400,54 @@
                 class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
               >
                 <a href="https://www.delve.ai/" target="_blank"
+                  ><span class="truncate">Descubre más</span></a
+                >
+              </button>
+            </div>
+            <!-- Card 5 -->
+            <div
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary"
+                >
+                  <span class="material-symbols-outlined"> text_ad </span>
+                </div>
+                <h3 class="text-lg font-bold text-white">Pollo AI</h3>
+              </div>
+              <p class="mt-4 flex-grow text-gray-300">
+                Genera contenido publicitario de forma automática con IA,
+                permitiendo al área de marketing crear anuncios y videos para
+                redes sociales a partir de texto, imágenes o clips existentes,
+                agilizando campañas sin depender de edición manual.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span
+                    >Producción rápida de anuncios y contenido promocional</span
+                  >
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-200">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Optimización de la identidad visual de marca</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-200">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check_circle</span
+                  >
+                  <span>Creación de contenido viral para redes sociales</span>
+                </div>
+              </div>
+              <button
+                class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
+              >
+                <a href="https://pollo.ai/es/home" target="_blank"
                   ><span class="truncate">Descubre más</span></a
                 >
               </button>
@@ -376,7 +472,7 @@
               ></path>
             </svg>
             <p class="text-gray-400 text-sm">
-              © 2025 Agente Finanzas. All rights reserved.
+              © 2025 AI's Finanzas. All rights reserved.
             </p>
           </div>
           <div
@@ -395,5 +491,19 @@
         </div>
       </footer>
     </div>
+
+    <!-- Script para la animación del fondo -->
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".background-slide");
+
+      function nextSlide() {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }
+
+      setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+    </script>
   </body>
 </html>

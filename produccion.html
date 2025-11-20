@@ -43,9 +43,65 @@
       .material-symbols-outlined {
         font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
       }
+
+      /* Background Animation Styles */
+      .background-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .background-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .background-slide.active {
+        opacity: 1;
+      }
+
+      .slide1 {
+        background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      }
+
+      .slide2 {
+        background-image: url('/img/produccionUno.png');
+      }
+
+      .slide3 {
+        background-image: url('/img/produccionDos.png');
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(16, 22, 34, 0.85);
+      }
     </style>
   </head>
   <body class="bg-background-light dark:bg-background-dark font-display">
+    <!-- Animated Background -->
+    <div class="background-container">
+      <div class="background-slide slide1 active"></div>
+      <div class="background-slide slide2"></div>
+      <div class="background-slide slide3"></div>
+      <div class="overlay"></div>
+    </div>
+
     <div class="relative flex min-h-screen w-full flex-col">
       <div class="flex-grow">
         <header
@@ -67,7 +123,7 @@
                 ></path>
               </svg>
               <h2 class="text-white text-xl font-bold leading-tight">
-                Agentes de Producción
+                AI´s de Producción
               </h2>
             </div>
             <div class="hidden items-center gap-8 md:flex">
@@ -107,7 +163,7 @@
             <h1
               class="text-4xl font-black leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl"
             >
-              Agentes de Producción
+              AI's de Producción
             </h1>
             <p class="mt-4 text-lg text-gray-400 sm:text-xl">
               Un potente conjunto de herramientas de IA diseñadas para optimizar
@@ -119,7 +175,7 @@
           >
             <!-- Card 1 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -131,25 +187,25 @@
                   katanamrp
                 </h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Agente para optimizar flujos con planificación visual,
                 programación automática, trazabilidad de materiales y control de
                 calidad en tiempo rea
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Planificación visual de producción</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Automatización de programación</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -166,7 +222,7 @@
             </div>
             <!-- Card 2 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -178,24 +234,24 @@
                   MiniMax
                 </h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 IA agentica para optimizar flujos, planes maestros, cadena de
                 suministro, control de calidad y simulaciones predictivas.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Optimización de flujos de producción</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Análisis de cadena de suministro</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -212,7 +268,7 @@
             </div>
             <!-- Card 3 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -226,25 +282,25 @@
                   Genspark
                 </h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 IA agentica para automatizar programación, optimizar procesos,
                 detectar defectos, planificar predictivamente y analizar cadenas
                 de suministro.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Automatización de programación de producción</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Optimización de procesos manufactureros</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -261,7 +317,7 @@
             </div>
             <!-- Card 4 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -273,24 +329,24 @@
                   Canvass AI
                 </h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Agente para optimizar procesos, mantenimiento predictivo, análisis
                 hiper de datos y cumplimiento industrial.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Análisis hiper de datos con IA generativa</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Mantenimiento predictivo asistido por IA</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -303,10 +359,6 @@
                 <a href="https://www.canvass.io/" target="_blank"
                   ><span class="truncate">Descubre más</span></a
                 >
-              </button>
-            </div>
-        
-                
               </button>
             </div>
           </div>
@@ -348,5 +400,19 @@
         </div>
       </footer>
     </div>
+
+    <!-- Script para la animación del fondo -->
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.background-slide');
+      
+      function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }
+      
+      setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+    </script>
   </body>
 </html>

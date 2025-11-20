@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login - AI Agents Platform</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <main class="flex-1">
+          <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-8">
+            <a class="flex items-center gap-4 text-white" href="/">
+              <div class="size-6">
+                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6_535)">
+                    <path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6_535">
+                      <rect fill="white" height="48" width="48"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI Agents GTCloud</h2>
+            </a>
+            <div class="flex items-center gap-4">
+              <span class="text-white/60 text-sm hidden sm:inline">¿No tienes una cuenta?</span>
+              <a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 hover:bg-white/20 text-white text-sm font-bold leading-normal tracking-[0.015em]" href="/registro.html">
+                <span class="truncate">Registrate</span>
+              </a>
+            </div>
+          </header>
+          <section class="relative flex grow items-center justify-center py-12 sm:py-16 lg:py-20">
+            <div class="absolute inset-0 z-0">
+              <img alt="Abstract blue and purple lines on a dark background, conveying a sense of technology and data flow." class="h-full w-full object-cover opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwngOFpw7ohbBwEf7S7t59NAy443SixtRo_6z6txRGapCCRtvI5FLnsgUosRX6HLJn-53HWWOwyl9Y_sTsVeF-Qs6Gr4Lx2uyKI4aSNJzj7ZI6Q-vSGVgl54ezkrExuqnd_6_N3FY7xi7BaT3ElhiVSPf65di_fOmxipz2SYhsfdepu9FCqSa_3sIjojuUycWX8INgye4Yeg3pD1-sflxVipyjBdYVlNPbKXHKadqR5im6rbmKeL4O1BqZlksSsvMMUpuAos4Y5Flf"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
+            </div>
+            <div class="relative z-10 mx-auto w-full max-w-md px-4">
+              <div class="flex flex-col items-center text-center">
+                <h1 class="text-white text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+                  Bienvenido
+                </h1>
+                <p class="mt-2 max-w-2xl text-base font-normal leading-normal text-white/80">
+                  Inicia sesión para acceder a tus agentes de IA.
+                </p>
+              </div>
+              <div class="mt-8 space-y-6">
+                <form class="space-y-6" id="loginForm" method="POST">
+                  <div>
+                    <label class="text-white/80 text-sm font-medium" for="email">Email o nombre de usuario</label>
+                    <div class="mt-2">
+                      <input autocomplete="email" class="w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white placeholder:text-white/40 focus:border-primary focus:ring-2 focus:ring-primary/50" id="email" name="email" placeholder="email" required="" type="email"/>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex items-center justify-between">
+                      <label class="text-white/80 text-sm font-medium" for="password">Contraseña</label>
+                      <a class="text-primary hover:underline text-sm font-medium" href="/recuperar_contraseña.html">
+                        ¿Has olvidado tu contraseña?
+                      </a>
+                    </div>
+                    <div class="mt-2">
+                      <input autocomplete="current-password" class="w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white placeholder:text-white/40 focus:border-primary focus:ring-2 focus:ring-primary/50" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+                    </div>
+                  </div>
+                  <!-- Mensaje de error/éxito -->
+                  <div id="mensaje" class="text-sm hidden mt-2 p-2 rounded" style="background-color: rgba(239, 68, 68, 0.2); color: #fca5a5;"></div>
+                  <div>
+                    <button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-[0.015em]" type="submit">
+                      <span class="truncate">Ingresar</span>
+                    </button>
+                  </div>
+                </form>
+                <p class="text-center text-sm text-white/60">
+                  ¿No tienes una cuenta?
+                  <a class="font-medium text-primary hover:underline" href="/registro.html">Regístrate aquí</a>
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- Script ÚNICO: Inicialización + Lógica del Login -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+      // TU CONFIG NUEVA Y COMPLETA
+      const firebaseConfig = {
+        apiKey: "AIzaSyBjktx8YCSCTvTK8hxFXjFTfSKZLOlizWI",
+        authDomain: "ai-agents-gtcloud.firebaseapp.com",
+        projectId: "ai-agents-gtcloud",
+        storageBucket: "ai-agents-gtcloud.firebasestorage.app",
+        messagingSenderId: "434277005102",
+        appId: "1:434277005102:web:f4ddbd6a00674a17af2cbf"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      console.log('Firebase login inicializado OK');
+
+      const form = document.getElementById('loginForm');
+      const mensaje = document.getElementById('mensaje');
+
+    //   // Si ya está logueado, redirige auto a index
+    //   onAuthStateChanged(auth, (user) => {
+    //     if (user) {
+    //       window.location.href = '/index.html';
+    //     }
+    //   });
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+
+        mensaje.classList.add('hidden');
+        mensaje.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
+        mensaje.style.color = '#fca5a5';
+
+        if (!email || !password) {
+          mensaje.textContent = 'Ingresa email y contraseña.';
+          mensaje.classList.remove('hidden');
+          return;
+        }
+
+        try {
+          console.log('Intentando login con:', email);
+          await signInWithEmailAndPassword(auth, email, password);
+          mensaje.textContent = '¡Login exitoso! Redirigiendo...';
+          mensaje.style.backgroundColor = 'rgba(34, 197, 94, 0.2)';
+          mensaje.style.color = '#86efac';
+          mensaje.classList.remove('hidden');
+          setTimeout(() => window.location.href = '/index.html', 1500);
+        } catch (error) {
+          console.error('Error de login:', error);
+          let msg = 'Error: ';
+          if (error.code === 'auth/user-not-found') msg += 'Usuario no encontrado.';
+          else if (error.code === 'auth/wrong-password') msg += 'Contraseña incorrecta.';
+          else if (error.code === 'auth/invalid-email') msg += 'Email inválido.';
+          else msg += error.message;
+          mensaje.textContent = msg;
+          mensaje.classList.remove('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>

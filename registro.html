@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sign Up - AI Agents Platform</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- NO hay script de Firebase aquí - se mueve al body para evitar duplicados -->
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-white"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Abstract blue and purple lines on a dark background, conveying a sense of technology and data flow."
+          class="h-full w-full object-cover opacity-20"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwngOFpw7ohbBwEf7S7t59NAy443SixtRo_6z6txRGapCCRtvI5FLnsgUosRX6HLJn-53HWWOwyl9Y_sTsVeF-Qs6Gr4Lx2uyKI4aSNJzj7ZI6Q-vSGVgl54ezkrExuqnd_6_N3FY7xi7BaT3ElhiVSPf65di_fOmxipz2SYhsfdepu9FCqSa_3sIjojuUycWX8INgye4Yeg3pD1-sflxVipyjBdYVlNPbKXHKadqR5im6rbmKeL4O1BqZlksSsvMMUpuAos4Y5Flf"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-background-dark"
+        ></div>
+      </div>
+      <div
+        class="relative z-10 flex min-h-screen flex-col items-center justify-center p-4"
+      >
+        <div class="w-full max-w-md">
+          <div class="mb-8 text-center">
+            <div
+              class="mx-auto mb-4 flex h-12 w-12 items-center justify-center text-primary"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_6_535)">
+                  <path
+                    clip-rule="evenodd"
+                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_535">
+                    <rect fill="white" height="48" width="48"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h1 class="text-3xl font-bold tracking-tight text-white">
+              Crea tu cuenta
+            </h1>
+            <p class="mt-2 text-white/60">
+              Libera el poder de la IA para tu negocio.
+            </p>
+          </div>
+          <div
+            class="rounded-xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-lg"
+          >
+            <!-- Formulario único y correcto -->
+            <form class="flex flex-col gap-4" id="registroForm">
+              <div class="flex flex-col gap-1.5">
+                <label class="text-sm font-medium text-white/80" for="name"
+                  >Nombre</label
+                >
+                <input
+                  class="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/40 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  id="name"
+                  name="name"
+                  placeholder="Nombre"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label class="text-sm font-medium text-white/80" for="email"
+                  >Email</label
+                >
+                <input
+                  class="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/40 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  id="email"
+                  name="email"
+                  placeholder="email"
+                  type="email"
+                  required
+                />
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label class="text-sm font-medium text-white/80" for="password"
+                  >Contraseña</label
+                >
+                <input
+                  class="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/40 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  id="password"
+                  name="password"
+                  placeholder="••••••••"
+                  type="password"
+                  required
+                  minlength="6"
+                />
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label
+                  class="text-sm font-medium text-white/80"
+                  for="confirm-password"
+                  >Confirmar Contraseña</label
+                >
+                <input
+                  class="block w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/40 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  id="confirm-password"
+                  name="confirm-password"
+                  placeholder="••••••••"
+                  type="password"
+                  required
+                />
+              </div>
+              <!-- Mensaje de error/éxito - LIMPIO -->
+              <div
+                id="mensaje"
+                class="text-sm hidden mt-2 p-2 rounded"
+                style="background-color: rgba(239, 68, 68, 0.2); color: #fca5a5;"
+              ></div>
+              
+              <button
+                class="mt-4 flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-[0.015em]"
+                type="submit"
+              >
+                <span class="truncate">Crear Cuenta</span>
+              </button>
+            </form>
+          </div>
+          <p class="mt-6 text-center text-sm text-white/60">
+            ¿Ya tienes una cuenta?
+            <a
+              class="font-medium text-primary hover:underline"
+              href="/login.html"
+              >Inicia sesión.</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script ÚNICO: Inicialización + Lógica del Form (al final del body) -->
+    <script type="module">
+      // Imports de Firebase
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+      // TU CONFIG NUEVA Y COMPLETA (¡no cambies esto!)
+      const firebaseConfig = {
+        apiKey: "AIzaSyBjktx8YCSCTvTK8hxFXjFTfSKZLOlizWI",
+        authDomain: "ai-agents-gtcloud.firebaseapp.com",
+        projectId: "ai-agents-gtcloud",
+        storageBucket: "ai-agents-gtcloud.firebasestorage.app",
+        messagingSenderId: "434277005102",
+        appId: "1:434277005102:web:f4ddbd6a00674a17af2cbf"
+      };
+
+      // Inicializa Firebase (solo una vez)
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      console.log('Firebase inicializado correctamente:', auth); // Debug: Ver en F12 > Console
+
+      // Elementos del DOM
+      const form = document.getElementById('registroForm');
+      const mensaje = document.getElementById('mensaje');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+
+        // Limpiar mensaje anterior
+        mensaje.classList.add('hidden');
+        mensaje.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
+        mensaje.style.color = '#fca5a5';
+
+        // Validaciones básicas
+        if (!email) {
+          mensaje.textContent = 'Ingresa un email válido.';
+          mensaje.classList.remove('hidden');
+          return;
+        }
+        if (password !== confirmPassword) {
+          mensaje.textContent = 'Las contraseñas no coinciden.';
+          mensaje.classList.remove('hidden');
+          return;
+        }
+        if (password.length < 6) {
+          mensaje.textContent = 'La contraseña debe tener al menos 6 caracteres.';
+          mensaje.classList.remove('hidden');
+          return;
+        }
+
+        try {
+          console.log('Creando usuario con:', email); // Debug
+          await createUserWithEmailAndPassword(auth, email, password);
+          // Éxito: Cambia a verde
+          mensaje.textContent = '¡Cuenta creada exitosamente! Redirigiendo al login...';
+          mensaje.style.backgroundColor = 'rgba(34, 197, 94, 0.2)';
+          mensaje.style.color = '#86efac';
+          mensaje.classList.remove('hidden');
+          setTimeout(() => window.location.href = '/login.html', 2000);
+        } catch (error) {
+          console.error('Error completo de Firebase:', error); // Debug: Pégame esto si falla
+          let errorMsg = 'Error al crear la cuenta: ';
+          if (error.code === 'auth/email-already-in-use') {
+            errorMsg += 'Este email ya está registrado.';
+          } else if (error.code === 'auth/invalid-email') {
+            errorMsg += 'Email inválido.';
+          } else if (error.code === 'auth/weak-password') {
+            errorMsg += 'Contraseña muy débil.';
+          } else {
+            errorMsg += error.message || 'Inténtalo de nuevo.';
+          }
+          mensaje.textContent = errorMsg;
+          mensaje.classList.remove('hidden');
+        }
+      });
+
+      console.log('Script de registro cargado.'); // Debug final
+    </script>
+  </body>
+</html>

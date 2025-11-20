@@ -43,9 +43,65 @@
       .material-symbols-outlined {
         font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
       }
+
+      /* Background Animation Styles */
+      .background-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .background-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .background-slide.active {
+        opacity: 1;
+      }
+
+      .slide1 {
+        background-image: url('/img/AI\ finanzas.png');
+      }
+
+      .slide2 {
+        background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      }
+
+      .slide3 {
+        background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(16, 22, 34, 0.85);
+      }
     </style>
   </head>
   <body class="bg-background-light dark:bg-background-dark font-display">
+    <!-- Animated Background -->
+    <div class="background-container">
+      <div class="background-slide slide1 active"></div>
+      <div class="background-slide slide2"></div>
+      <div class="background-slide slide3"></div>
+      <div class="overlay"></div>
+    </div>
+
     <div class="relative flex min-h-screen w-full flex-col">
       <div class="flex-grow">
         <header
@@ -67,7 +123,7 @@
                 ></path>
               </svg>
               <h2 class="text-white text-xl font-bold leading-tight">
-                Agente Finanzas
+                AI's Finanzas
               </h2>
             </div>
             <div class="hidden items-center gap-8 md:flex">
@@ -108,7 +164,7 @@
             <h1
               class="text-4xl font-black leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl"
             >
-              Agentes de Finanzas
+              AI's de Finanzas
             </h1>
             <p class="mt-4 text-lg text-gray-400 sm:text-xl">
               Aproveche la IA para optimizar sus operaciones financieras, desde
@@ -120,7 +176,7 @@
           >
             <!-- Card 1 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -132,24 +188,24 @@
                 </div>
                 <h3 class="text-lg font-bold text-white">Plaid</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Gestión inteligente de finanzas con conexión segura y análisis
                 en tiempo real.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Conexión a cuentas bancarias y datos de cuenta</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Transacciones y categorización de gastos</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -169,7 +225,7 @@
             </div>
             <!-- Card 2 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -179,23 +235,23 @@
                 </div>
                 <h3 class="text-lg font-bold text-white">MiniMax</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Herramienta de análisis financiero inteligente.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Análisis de Márgenes y Costos</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Automatización de Reportes KPI</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -212,7 +268,7 @@
             </div>
             <!-- Card 3 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -224,23 +280,23 @@
                 </div>
                 <h3 class="text-lg font-bold text-white">Genspark</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 IA financiera que transforma datos en insights accionables
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Dashboards de Márgenes Interactivos</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Detección de Riesgos en Reportes</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -257,7 +313,7 @@
             </div>
             <!-- Card 4 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -269,24 +325,24 @@
                 </div>
                 <h3 class="text-lg font-bold text-white">Zeni</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Automatiza contabilidad, pronostica cash flow y optimiza
                 finanzas
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Automatización de Contabilidad</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Análisis y Predicción de Flujo de Caja</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -305,7 +361,7 @@
             </div>
             <!-- Card 5 -->
             <div
-              class="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/10"
+              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -315,13 +371,13 @@
                 </div>
                 <h3 class="text-lg font-bold text-white">Agente Financiero - GTChat</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-400">
+              <p class="mt-4 flex-grow text-gray-300">
                 Nuestro servicio de análisis financiero utiliza tecnologías de
                 IA para analizar grandes cantidades de datos financieros y
                 realizar una variedad de análisis.
               </p>
               <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -330,13 +386,13 @@
                     rentables</span
                   >
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
                   <span>Conocer que proceso es más costoso en la companía</span>
                 </div>
-                <div class="flex items-center gap-2 text-sm text-gray-300">
+                <div class="flex items-center gap-2 text-sm text-gray-200">
                   <span class="material-symbols-outlined text-primary text-base"
                     >check_circle</span
                   >
@@ -350,7 +406,7 @@
                 class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
               >
                 <a
-                  href="https://www.gtcloud.co/copia-de-internet-de-las-cosas-2"
+                  href="http://54.198.81.168:5000/auth/login"
                   target="_blank"
                   ><span class="truncate">Descubre más</span></a
                 >
@@ -376,7 +432,7 @@
               ></path>
             </svg>
             <p class="text-gray-400 text-sm">
-              © 2025 Agente Finanzas. All rights reserved.
+              © 2025 AI's Finanzas. All rights reserved.
             </p>
           </div>
           <div
@@ -395,5 +451,19 @@
         </div>
       </footer>
     </div>
+
+    <!-- Script para la animación del fondo -->
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.background-slide');
+      
+      function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }
+      
+      setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+    </script>
   </body>
 </html>
