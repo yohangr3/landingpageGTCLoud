@@ -1,21 +1,14 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en">
+<html class="dark" lang="es">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>AI's Multiagentes - AI Multiagentes Tools</title>
+    <title>IA Multiagentes - Soluciones Empresariales</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -26,15 +19,7 @@
               "background-light": "#f6f6f8",
               "background-dark": "#101622",
             },
-            fontFamily: {
-              display: ["Space Grotesk"],
-            },
-            borderRadius: {
-              DEFAULT: "0.25rem",
-              lg: "0.5rem",
-              xl: "0.75rem",
-              full: "9999px",
-            },
+            fontFamily: { display: ["Space Grotesk"] },
           },
         },
       };
@@ -43,58 +28,26 @@
       .material-symbols-outlined {
         font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
       }
-
-      /* Background Animation Styles */
-      .background-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        overflow: hidden;
-      }
-
+      .background-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
       .background-slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background-size: cover; background-position: center; opacity: 0;
+        transition: opacity 1.2s ease-in-out;
       }
-
-      .background-slide.active {
-        opacity: 1;
-      }
-
-      .slide1 {
-        background-image: url('/img/multiagentesUno.jpg');
-      }
-
-      .slide2 {
-        background-image: url('/img/multiagentesDos.jpg');
-      }
-
-      .slide3 {
-        background-image: url('/img/multiagentesTres.jpg');
-      }
-
+      .background-slide.active { opacity: 1; }
+      .slide1 { background-image: url("/img/multiagentesUno.jpg"); }
+      .slide2 { background-image: url("/img/multiagentesDos.jpg"); }
+      .slide3 { background-image: url("/img/multiagentesTres.jpg"); }
       .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(16, 22, 34, 0.85);
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(16, 22, 34, 0.15);
       }
+      /* Texto blanco fuerte global */
+      h1, h2, h3, p, span, a { color: #ffffff !important; }
+      .text-gray-400, .text-gray-300, .text-gray-200 { color: #f1f5f9 !important; }
     </style>
   </head>
   <body class="bg-background-light dark:bg-background-dark font-display">
-    <!-- Animated Background -->
     <div class="background-container">
       <div class="background-slide slide1 active"></div>
       <div class="background-slide slide2"></div>
@@ -104,355 +57,186 @@
 
     <div class="relative flex min-h-screen w-full flex-col">
       <div class="flex-grow">
-        <header
-          class="sticky top-0 z-50 border-b border-white/10 bg-background-dark/80 backdrop-blur-sm"
-        >
-          <nav
-            class="container mx-auto flex items-center justify-between px-6 py-4"
-          >
-            <div class="flex items-center gap-4 text-white">
-              <svg
-                class="h-6 w-6 text-primary"
-                fill="none"
-                viewbox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"
-                  fill="currentColor"
-                ></path>
+        <header class="sticky top-0 z-50 border-b border-white/10 bg-background-dark/80 backdrop-blur-sm">
+          <nav class="container mx-auto flex items-center justify-between px-6 py-4">
+            <div class="flex items-center gap-4">
+              <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
               </svg>
-              <h2 class="text-white text-xl font-bold leading-tight">
-                IA's Multiagentes
-              </h2>
+              <a href="/index.html"><h2 class="text-xl font-bold">IA Multiagentes</h2></a>
             </div>
             <div class="hidden items-center gap-8 md:flex">
-              <a
-                class="text-gray-300 hover:text-white text-sm font-medium leading-normal"
-                href="/index.html"
-                >Inicio</a
-              >
-              <a
-                class="text-gray-300 hover:text-white text-sm font-medium leading-normal"
-                href="#"
-                >Características</a
-              >
-
-              <a
-                class="text-gray-300 hover:text-white text-sm font-medium leading-normal"
-                href="#"
-                >Integraciones</a
-              >
-              <a
-                class="text-gray-300 hover:text-white text-sm font-medium leading-normal"
-                href="https://www.gtcloud.co/quienes-somos" target="_blank"
-                >Compañia</a
-              >
+              <a class="hover:text-white text-sm font-medium" href="/index.html">Inicio</a>
+              <a class="hover:text-white text-sm font-medium" href="#">Características</a>
+              <a class="hover:text-white text-sm font-medium" href="#">Integraciones</a>
+              <a class="hover:text-white text-sm font-medium" href="https://www.gtcloud.co/quienes-somos" target="_blank">Compañía</a>
             </div>
-            <div class="flex gap-3">
-              <button
-                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/90"
-              >
-                <span class="truncate">Get Started</span>
-              </button>
-            </div>
+            <div id="auth-container" class="flex items-center gap-3"></div>
           </nav>
         </header>
+
         <main class="container mx-auto px-6 py-16 sm:py-24">
           <div class="mx-auto max-w-3xl text-center">
-            <h1
-              class="text-4xl font-black leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl"
-            >
+            <h1 class="text-4xl font-black leading-tight tracking-tighter sm:text-5xl md:text-6xl">
               IA Multiagentes
             </h1>
-            <p class="mt-4 text-lg text-gray-400 sm:text-xl">
-              Agentes combinados de IA para potenciar diferentes áreas empresariales con integraciones inteligentes.
+            <p class="mt-6 text-lg sm:text-xl font-medium">
+              Agentes combinados de IA que trabajan en equipo para resolver problemas complejos en marketing, finanzas, RRHH, ventas y logística.
             </p>
           </div>
-          <div
-            class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
-          >
-            <!-- Card 1: ContentForge AI -->
-            <div
-              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
-            >
-              <div class="flex items-center gap-4">
-                <div
-                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary"
-                >
-                  <span class="material-symbols-outlined">
-                    brand_awareness
-                  </span>
-                </div>
-                <h3 class="text-lg font-bold text-white">
-                  Agente IA: Jasper + Synthesia
-                </h3>
-              </div>
-              <p class="mt-4 flex-grow text-gray-300">
-                Para Marketing: Automatización de contenido escrito y videos personalizados.
-              </p>
-              <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Genera posts y blogs con tono de marca, luego crea videos programáticos con avatares y guiones.</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Automatiza flujos de distribución de contenido multimedia en múltiples idiomas.</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Integra plantillas para campañas coherentes, con webhooks para notificaciones de renderizado.</span>
-                </div>
-              </div>
-              <button
-                class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
-              >
-                <a href="#" target="_blank"
-                  ><span class="truncate">Descubre más</span></a
-                >
-              </button>
-            </div>
-            <!-- Card 2: WealthOracle -->
-            <div
-              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
-            >
-              <div class="flex items-center gap-4">
-                <div
-                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary"
-                >
-                  <span class="material-symbols-outlined"> account_balance </span>
-                </div>
-                <h3 class="text-lg font-bold text-white">
-                  Agente IA: Plaid + Minimax
-                </h3>
-              </div>
-              <p class="mt-4 flex-grow text-gray-300">
-                Para Finanzas: Gestión de datos bancarios y pronósticos financieros.
-              </p>
-              <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Conecta cuentas para transacciones en tiempo real y analiza márgenes con datos históricos.</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Automatiza reportes KPI y optimización de presupuestos basados en balances instantáneos.</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Predice flujos de caja con categorización de gastos y alertas de bajo rendimiento.</span>
-                </div>
-              </div>
-              <button
-                class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
-              >
-                <a href="#" target="_blank"
-                  ><span class="truncate">Descubre más</span></a
-                >
-              </button>
-            </div>
-            <!-- Card 3: TalentHarmony -->
-            <div
-              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
-            >
-              <div class="flex items-center gap-4">
-                <div
-                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary"
-                >
-                  <span class="material-symbols-outlined"> people </span>
-                </div>
-                <h3 class="text-lg font-bold text-white">
-                  Agente IA: Eightfold.ai + Leena AI
-                </h3>
-              </div>
-              <p class="mt-4 flex-grow text-gray-300">
-                Para Recursos Humanos: Reclutamiento y servicio al empleado integrado.
-              </p>
-              <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Realiza matching de talento con habilidades y automatiza onboarding/offboarding.</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Gestiona consultas de empleados con IA y mapea brechas para movilidad interna.</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Proporciona análisis de rotación y métricas HR con dashboards de diversidad.</span>
-                </div>
-              </div>
-              <button
-                class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
-              >
-                <a href="#" target="_blank"
-                  ><span class="truncate">Descubre más</span></a
-                >
-              </button>
-            </div>
-            <!-- Card 4: SalesSorcerer -->
-            <div
-              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
-            >
+
+          <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Marketing: Jasper + Synthesia -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
               <div class="flex items-center gap-4">
                 <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
-                  <span class="material-symbols-outlined">
-                    sell
-                  </span>
+                  <span class="material-symbols-outlined text-3xl">movie</span>
                 </div>
-                <h3 class="text-lg font-bold text-white">
-                  Agente IA: Apollo.io + Lavender AI
-                </h3>
+                <h3 class="text-lg font-bold">Jasper + Synthesia</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-300">
-                Para Comercial: Prospección y optimización de emails de ventas.
-              </p>
-              <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Enriquece datos de prospectos y genera correos personalizados con coaching en tiempo real.</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Automatiza engagement multicanal y analiza conversaciones para insights de pipeline.</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Integra con CRM para segmentación limpia y puntuación de emails virales.</span>
-                </div>
+              <p class="mt-4 text-white font-medium">Marketing Automatizado</p>
+              <div class="mt-4 space-y-2 text-sm text-gray-100">
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Genera contenido escrito + videos con avatares en minutos</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Campañas multilingües automáticas</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Distribución programada en redes y email</span></div>
               </div>
-              <button
-                class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
-              >
-                <a href="#" target="_blank"
-                  ><span class="truncate">Descubre más</span></a
-                >
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <span class="truncate">Próximamente</span>
               </button>
             </div>
-            <!-- Card 5: RouteRanger -->
-            <div
-              class="flex flex-col rounded-xl border border-white/20 bg-background-dark/10 backdrop-blur-md p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background-dark/10 hover:shadow-2xl hover:shadow-primary/20"
-            >
+
+            <!-- Finanzas: Plaid + Minimax -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
               <div class="flex items-center gap-4">
-                <div
-                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary"
-                >
-                  <span class="material-symbols-outlined">
-                    local_shipping
-                  </span>
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
                 </div>
-                <h3 class="text-lg font-bold text-white">
-                  Agente IA: Project44 + SimpliRoute
-                </h3>
+                <h3 class="text-lg font-bold">Plaid + MiniMax</h3>
               </div>
-              <p class="mt-4 flex-grow text-gray-300">
-                Para Logística: Visibilidad y optimización de rutas de entrega.
-              </p>
-              <div class="mt-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Monitorea envíos en tiempo real y optimiza rutas automáticamente con predicción de demandas.</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Gestiona última milla con orquestación de agentes IA y análisis de datos logísticos.</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-200">
-                  <span class="material-symbols-outlined text-primary text-base"
-                    >check_circle</span
-                  >
-                  <span>Proporciona trazabilidad multimodal y alertas de seguridad para cumplimiento.</span>
-                </div>
+              <p class="mt-4 text-white font-medium">Gestión Financiera Inteligente</p>
+              <div class="mt-4 space-y-2 text-sm text-gray-100">
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Conexión bancaria en tiempo real + análisis predictivo</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Pronósticos de flujo de caja automáticos</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Alertas de gastos y optimización de presupuesto</span></div>
               </div>
-              <button
-                class="mt-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-primary/30"
-              >
-                <a href="#" target="_blank"
-                  ><span class="truncate">Descubre más</span></a
-                >
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <span class="truncate">Próximamente</span>
               </button>
             </div>
+
+            <!-- RRHH: Eightfold + Leena AI -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">group</span>
+                </div>
+                <h3 class="text-lg font-bold">Eightfold + Leena AI</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">Reclutamiento y Employee Experience</p>
+              <div class="mt-4 space-y-2 text-sm text-gray-100">
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Matching de talento + chatbot HR 24/7</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Onboarding/offboarding automatizado</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Análisis predictivo de rotación</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <span class="truncate">Próximamente</span>
+              </button>
+            </div>
+
+            <!-- Ventas: Apollo + Lavender -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">sell</span>
+                </div>
+                <h3 class="text-lg font-bold">Apollo.io + Lavender</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">Prospección y Email Intelligence</p>
+              <div class="mt-4 space-y-2 text-sm text-gray-100">
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Enriquecimiento de leads + redacción de emails perfecta</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Coaching en tiempo real de mensajes</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Automatización multicanal con scoring</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <span class="truncate">Próximamente</span>
+              </button>
+            </div>
+
+            <!-- Logística: Project44 + SimpliRoute -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">local_shipping</span>
+                </div>
+                <h3 class="text-lg font-bold">Project44 + SimpliRoute</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">Logística y Última Milla</p>
+              <div class="mt-4 space-y-2 text-sm text-gray-100">
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Visibilidad total de la cadena + rutas optimizadas</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Predicción de demanda y ETA</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span><span>Gestión automática de incidencias</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <span class="truncate">Próximamente</span>
+              </button>
+            </div>
+
           </div>
         </main>
       </div>
-      <footer class="border-t border-white/10">
-        <div
-          class="container mx-auto flex flex-col items-center justify-between gap-6 px-6 py-8 text-center sm:flex-row"
-        >
+
+      <footer class="border-t border-white/10 mt-auto">
+        <div class="container mx-auto flex flex-col items-center justify-between gap-6 px-6 py-8 text-center sm:flex-row">
           <div class="flex items-center gap-4">
-            <svg
-              class="h-5 w-5 text-gray-400"
-              fill="none"
-              viewbox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"
-                fill="currentColor"
-              ></path>
+            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
             </svg>
-            <p class="text-gray-400 text-sm">
-              © 2025 AI's Multiagentes. All rights reserved.
-            </p>
+            <p class="text-sm">© 2025 IA Multiagentes. All rights reserved.</p>
           </div>
-          <div
-            class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"
-          >
-            <a class="text-gray-400 hover:text-white text-sm" href="#"
-              >Términos</a
-            >
-            <a class="text-gray-400 hover:text-white text-sm" href="#"
-              >Política de Privacidad</a
-            >
-            <a class="text-gray-400 hover:text-white text-sm" href="#"
-              >Contactanos</a
-            >
+          <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+            <a href="#" class="hover:text-white">Términos</a>
+            <a href="#" class="hover:text-white">Política de Privacidad</a>
+            <a href="#" class="hover:text-white">Contáctanos</a>
           </div>
         </div>
       </footer>
     </div>
 
-    <!-- Script para la animación del fondo -->
+    <!-- Animación del fondo -->
     <script>
       let currentSlide = 0;
-      const slides = document.querySelectorAll('.background-slide');
-      
+      const slides = document.querySelectorAll(".background-slide");
       function nextSlide() {
-        slides[currentSlide].classList.remove('active');
+        slides[currentSlide].classList.remove("active");
         currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
+        slides[currentSlide].classList.add("active");
       }
-      
-      setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+      setInterval(nextSlide, 5000);
+    </script>
+
+    <!-- Auth -->
+    <script type="module" src="auth.js"></script>
+    <script type="module">
+      import { protectPage, logout } from "./auth.js";
+      import { onAuthStateChanged, getAuth } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+      protectPage();
+      const auth = getAuth();
+      const authContainer = document.getElementById("auth-container");
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          authContainer.innerHTML = `
+            <span class="hidden sm:inline text-white/80 text-sm">Hola, ${user.email.split('@')[0]}</span>
+            <button id="logout-btn" class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-red-600 text-white text-sm font-bold transition-colors hover:bg-red-700">
+              Cerrar Sesión
+            </button>
+          `;
+          document.getElementById("logout-btn").addEventListener("click", async () => {
+            await logout();
+            window.location.href = '/auth/login.html';
+          });
+        }
+      });
     </script>
   </body>
 </html>

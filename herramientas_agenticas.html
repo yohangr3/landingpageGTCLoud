@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Herramientas Agenticas - IA Empresarial</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: { display: ["Space Grotesk"] },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .background-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
+      .background-slide {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background-size: cover; background-position: center; opacity: 0;
+        transition: opacity 1.2s ease-in-out;
+      }
+      .background-slide.active { opacity: 1; }
+      .slide1 { background-image: url('/img/AI finanzas.png'); }
+      .slide2 { background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
+      .slide3 { background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
+      .overlay {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(16, 22, 34, 0.15);
+      }
+      /* Texto blanco fuerte global */
+      h1, h2, h3, p, span, a { color: #ffffff !important; }
+      .text-gray-400, .text-gray-300, .text-gray-200 { color: #f1f5f9 !important; }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="background-container">
+      <div class="background-slide slide1 active"></div>
+      <div class="background-slide slide2"></div>
+      <div class="background-slide slide3"></div>
+      <div class="overlay"></div>
+    </div>
+
+    <div class="relative flex min-h-screen w-full flex-col">
+      <div class="flex-grow">
+        <header class="sticky top-0 z-50 border-b border-white/10 bg-background-dark/80 backdrop-blur-sm">
+          <nav class="container mx-auto flex items-center justify-between px-6 py-4">
+            <div class="flex items-center gap-4">
+              <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+              </svg>
+              <a href="/index.html"><h2 class="text-xl font-bold">Herramientas Agenticas</h2></a>
+            </div>
+            <div class="hidden items-center gap-8 md:flex">
+              <a class="hover:text-white text-sm font-medium" href="/index.html">Inicio</a>
+              <a class="hover:text-white text-sm font-medium" href="#">Características</a>
+              <a class="hover:text-white text-sm font-medium" href="#">Integraciones</a>
+              <a class="hover:text-white text-sm font-medium" href="https://www.gtcloud.co/quienes-somos" target="_blank">Compañía</a>
+            </div>
+            <div id="auth-container" class="flex items-center gap-3"></div>
+          </nav>
+        </header>
+
+        <main class="container mx-auto px-6 py-16 sm:py-24">
+          <div class="mx-auto max-w-3xl text-center">
+            <h1 class="text-4xl font-black leading-tight tracking-tighter sm:text-5xl md:text-6xl">
+              Herramientas Agenticas
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl font-medium">
+              Aproveche agentes de IA avanzados para coordinar tareas, integrar herramientas corporativas y ofrecer respuestas precisas, reduciendo carga manual y aumentando la eficiencia en cada área del negocio.
+            </p>
+          </div>
+
+          <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Skywork.AI -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">auto_awesome</span>
+                </div>
+                <h3 class="text-lg font-bold">Skywork.AI</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">
+                Gestión inteligente de productividad con agentes AI seguros y análisis multimodal en tiempo real.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Generación de documentos profesionales</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Creación de presentaciones dinámicas</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Análisis inteligente de datos</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <a href="https://skywork.ai/" target="_blank" class="w-full text-center"><span class="truncate">Descubre más</span></a>
+              </button>
+            </div>
+
+            <!-- MiniMax -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">smart_toy</span>
+                </div>
+                <h3 class="text-lg font-bold">MiniMax</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">
+                Creación inteligente de contenido con IA multimodal segura y generación en tiempo real.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Generación de videos desde texto</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Creación y edición de imágenes y audio</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Asistente multi-agente para tareas complejas</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <a href="https://agent.minimax.io/" target="_blank" class="w-full text-center"><span class="truncate">Descubre más</span></a>
+              </button>
+            </div>
+
+            <!-- Genspark -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">insights</span>
+                </div>
+                <h3 class="text-lg font-bold">Genspark</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">
+                Herramienta agentica impulsada por modelos de IA que investiga, razona y entrega la respuesta final directamente.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Copiloto AI integrado para insights dinámicos</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Automatización de tareas multi-paso</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Agente autónomo que ejecuta acciones reales</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <a href="https://www.genspark.ai/" target="_blank" class="w-full text-center"><span class="truncate">Descubre más</span></a>
+              </button>
+            </div>
+
+            <!-- DeepSeek -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">psychology</span>
+                </div>
+                <h3 class="text-lg font-bold">DeepSeek</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">
+                Agente de inteligencia artificial especializada en modelos de lenguaje de alto rendimiento.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Automatización de diferentes áreas</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Análisis y Predicción de finanzas</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Optimización de Costos</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <a href="https://chat.deepseek.com/" target="_blank" class="w-full text-center"><span class="truncate">Descubre más</span></a>
+              </button>
+            </div>
+
+            <!-- Agente Financiero GTChat -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">finance_chip</span>
+                </div>
+                <h3 class="text-lg font-bold">Agente Financiero - GTChat</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">
+                Nuestro servicio de análisis financiero utiliza tecnologías de IA para analizar grandes cantidades de datos y realizar análisis avanzados.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Productos/servicios más rentables</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Procesos más costosos</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Procesos de mayor valor</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <a href="http://54.198.81.168:5000/auth/login" target="_blank" class="w-full text-center"><span class="truncate">Acceder Ahora</span></a>
+              </button>
+            </div>
+
+            <!-- Qwen.AI -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">hub</span>
+                </div>
+                <h3 class="text-lg font-bold">Qwen.AI</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">
+                Asistente agentico impulsado por IA multimodal avanzado para tareas empresariales complejas.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Informes y presentaciones instantáneas</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Asistente multimodal 24/7</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Automatización de tareas complejas</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <a href="https://qwen.ai/home" target="_blank" class="w-full text-center"><span class="truncate">Descubre más</span></a>
+              </button>
+            </div>
+
+            <!-- Ernie.AI -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">neurology</span>
+                </div>
+                <h3 class="text-lg font-bold">Ernie.AI</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">
+                Plataforma de IA multimodal avanzada que integra lenguaje, visión y razonamiento para soluciones empresariales innovadoras.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Análisis de imágenes, audio y video</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Razonamiento multimodal nativo</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Planificación agentica autónoma</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <a href="https://ernie.baidu.com/" target="_blank" class="w-full text-center"><span class="truncate">Descubre más</span></a>
+              </button>
+            </div>
+
+            <!-- Hume.io -->
+            <div class="flex flex-col rounded-xl border-2 border-white/40 bg-background-dark/70 backdrop-blur-xl p-6 transition-all duration-300 hover:border-primary hover:bg-background-dark/85 hover:shadow-2xl hover:shadow-primary/40">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined text-3xl">sentiment_very_satisfied</span>
+                </div>
+                <h3 class="text-lg font-bold">Hume.io</h3>
+              </div>
+              <p class="mt-4 text-white font-medium">
+                Agente emocional que detecta sentimientos en entrevistas, simula procesos y responde con empatía para mejor engagement.
+              </p>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Entrevistas emocionalmente inteligentes</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Procesos de contratación end-to-end</span></div>
+                <div class="flex items-center gap-2 text-sm text-gray-100"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Respuesta empática y análisis emocional</span></div>
+              </div>
+              <button class="mt-6 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm tracking-wide transition-all hover:bg-blue-700 hover:shadow-lg">
+                <a href="https://www.hume.ai/" target="_blank" class="w-full text-center"><span class="truncate">Descubre más</span></a>
+              </button>
+            </div>
+
+          </div>
+        </main>
+      </div>
+
+      <footer class="border-t border-white/10 mt-auto">
+        <div class="container mx-auto flex flex-col items-center justify-between gap-6 px-6 py-8 text-center sm:flex-row">
+          <div class="flex items-center gap-4">
+            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+            </svg>
+            <p class="text-sm">© 2025 Herramientas Agenticas. All rights reserved.</p>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+            <a href="#" class="hover:text-white">Términos</a>
+            <a href="#" class="hover:text-white">Política de Privacidad</a>
+            <a href="#" class="hover:text-white">Contáctanos</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Animación del fondo -->
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".background-slide");
+      function nextSlide() {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }
+      setInterval(nextSlide, 5000);
+    </script>
+
+    <!-- Auth -->
+    <script type="module" src="auth.js"></script>
+    <script type="module">
+      import { protectPage, logout } from "./auth.js";
+      import { onAuthStateChanged, getAuth } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+      protectPage();
+      const auth = getAuth();
+      const authContainer = document.getElementById("auth-container");
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          authContainer.innerHTML = `
+            <span class="hidden sm:inline text-white/80 text-sm">Hola, ${user.email.split('@')[0]}</span>
+            <button id="logout-btn" class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-red-600 text-white text-sm font-bold transition-colors hover:bg-red-700">
+              Cerrar Sesión
+            </button>
+          `;
+          document.getElementById("logout-btn").addEventListener("click", async () => {
+            await logout();
+            window.location.href = '/auth/login.html';
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

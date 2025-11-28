@@ -116,69 +116,50 @@
       </div>
     </div>
 
-    <!-- Script ÚNICO: Inicialización + Lógica del Login -->
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-      import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+<script type="module">
+  import { auth, signInWithEmailAndPassword, redirectIfLoggedIn } from "./auth.js";
 
-      // TU CONFIG NUEVA Y COMPLETA
-      const firebaseConfig = {
-        apiKey: "AIzaSyBjktx8YCSCTvTK8hxFXjFTfSKZLOlizWI",
-        authDomain: "ai-agents-gtcloud.firebaseapp.com",
-        projectId: "ai-agents-gtcloud",
-        storageBucket: "ai-agents-gtcloud.firebasestorage.app",
-        messagingSenderId: "434277005102",
-        appId: "1:434277005102:web:f4ddbd6a00674a17af2cbf"
-      };
+  // Si ya está logueado → fuera de aquí
+  redirectIfLoggedIn();
 
-      const app = initializeApp(firebaseConfig);
-      const auth = getAuth(app);
-      console.log('Firebase login inicializado OK');
+  const form = document.getElementById("loginForm");
+  const mensaje = document.getElementById("mensaje");
 
-      const form = document.getElementById('loginForm');
-      const mensaje = document.getElementById('mensaje');
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
 
-    //   // Si ya está logueado, redirige auto a index
-    //   onAuthStateChanged(auth, (user) => {
-    //     if (user) {
-    //       window.location.href = '/index.html';
-    //     }
-    //   });
+    mensaje.classList.add("hidden");
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = document.getElementById('email').value.trim();
-        const password = document.getElementById('password').value;
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      mensaje.textContent = "¡Bienvenido! Redirigiendo...";
+      mensaje.style.backgroundColor = "rgba(34, 197, 94, 0.2)";
+      mensaje.style.color = "#86efac";
+      mensaje.classList.remove("hidden");
+      setTimeout(() => window.location.replace("/index.html"), 1500);
+    } catch (error) {
+      let msg = "Error: ";
+      switch (error.code) {
+        case "auth/user-not-found":
+        case "auth/wrong-password":
+          msg += "Email o contraseña incorrectos.";
+          break;
+        case "auth/invalid-email":
+          msg += "Email inválido.";
+          break;
+        case "auth/too-many-requests":
+          msg += "Demasiados intentos. Intenta más tarde.";
+          break;
+        default:
+          msg += error.message;
+      }
+      mensaje.textContent = msg;
+      mensaje.classList.remove("hidden");
+    }
+  });
+</script>
 
-        mensaje.classList.add('hidden');
-        mensaje.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
-        mensaje.style.color = '#fca5a5';
-
-        if (!email || !password) {
-          mensaje.textContent = 'Ingresa email y contraseña.';
-          mensaje.classList.remove('hidden');
-          return;
-        }
-
-        try {
-          console.log('Intentando login con:', email);
-          await signInWithEmailAndPassword(auth, email, password);
-          mensaje.textContent = '¡Login exitoso! Redirigiendo...';
-          mensaje.style.backgroundColor = 'rgba(34, 197, 94, 0.2)';
-          mensaje.style.color = '#86efac';
-          mensaje.classList.remove('hidden');
-          setTimeout(() => window.location.href = '/index.html', 1500);
-        } catch (error) {
-          console.error('Error de login:', error);
-          let msg = 'Error: ';
-          if (error.code === 'auth/user-not-found') msg += 'Usuario no encontrado.';
-          else if (error.code === 'auth/wrong-password') msg += 'Contraseña incorrecta.';
-          else if (error.code === 'auth/invalid-email') msg += 'Email inválido.';
-          else msg += error.message;
-          mensaje.textContent = msg;
-          mensaje.classList.remove('hidden');
-        }
-      });
-    </script>
   </body>
 </html>
